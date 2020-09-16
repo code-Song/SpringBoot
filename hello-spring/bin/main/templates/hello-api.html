@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Hello-api</title>
+</head>
+<body>
+	<!-- @responseBody를 사용하고 객체를 반환하면 객체가 JSON으로 변환됨 -->
+	<p th:text="'hello ' + ${hello.getName()} + '!'"/>
+</body>
+</html>

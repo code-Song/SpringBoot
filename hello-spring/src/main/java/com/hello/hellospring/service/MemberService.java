@@ -3,14 +3,17 @@ package com.hello.hellospring.service;
 import java.util.List;
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hello.hellospring.domain.Member;
 import com.hello.hellospring.repository.MemberRepository;
 import com.hello.hellospring.repository.MemoryMemberRepository;
 
 //@Service //스프링 빈으로 자동등록
+@Transactional //JPA가 데이터를 변경, 저장할때 반드시 필요
 public class MemberService {
 	
 	//회원 서비스가 메모리 회원 리포지토리를 직접 생성
